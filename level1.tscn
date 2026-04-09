@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dnjcf5kg5xsc0"]
+
+[ext_resource type="Texture2D" uid="uid://csdvgxwuljohb" path="res://TheOneProto.svg" id="1_jwv3a"]
+
+[node name="Node2D" type="Node2D" unique_id=204398602]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1390425574]
+position = Vector2(348, 240)
+texture = ExtResource("1_jwv3a")
