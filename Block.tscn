@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://5yvunrc0c332"]
+
+[ext_resource type="Texture2D" uid="uid://b30t34sendx3r" path="res://pixel_brick_wall_grey.svg" id="1_2wby2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab6iy"]
+size = Vector2(670, 85)
+
+[node name="Block" type="Node2D" unique_id=1755264499]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1386354141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=391951928]
+position = Vector2(-4, -44.5)
+shape = SubResource("RectangleShape2D_ab6iy")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1668183479]
+position = Vector2(-5, 6)
+scale = Vector2(0.9852941, 0.78571427)
+texture = ExtResource("1_2wby2")
