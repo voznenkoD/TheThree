@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bun3m1i6u3o0s"]
+
+[ext_resource type="Texture2D" uid="uid://d1f6q6syltsgd" path="res://bulky_fat_pixel_blue_suit.svg" id="1_6334q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ri5"]
+size = Vector2(392, 315)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=313768211]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1780080231]
+position = Vector2(-8, -12)
+texture = ExtResource("1_6334q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1570444426]
+position = Vector2(-7, -71.5)
+shape = SubResource("RectangleShape2D_v3ri5")

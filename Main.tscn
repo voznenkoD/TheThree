@@ -2,17 +2,62 @@
 
 [ext_resource type="PackedScene" uid="uid://5yvunrc0c332" path="res://Block.tscn" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://dnjcf5kg5xsc0" path="res://Player.tscn" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://bun3m1i6u3o0s" path="res://Botherer.tscn" id="3_r0du0"]
+[ext_resource type="Script" uid="uid://cqr5f4wl2fy4h" path="res://enemy1.gd" id="4_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://d1f6q6syltsgd" path="res://bulky_fat_pixel_blue_suit.svg" id="5_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://bb0uwt24seee3" path="res://enemy_chase_state_pixel.svg" id="6_lgr22"]
+[ext_resource type="Texture2D" uid="uid://buwxqxdaaqmw4" path="res://enemy_dead.svg" id="6_trn2v"]
+[ext_resource type="Texture2D" uid="uid://driksy1qabgi7" path="res://dead_TheOneProto.svg" id="7_lgr22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgr22"]
+size = Vector2(418, 285)
 
 [node name="Main" type="Node2D" unique_id=1658230983]
+
+[node name="Block7" parent="." unique_id=1256268997 instance=ExtResource("1_glv2v")]
+position = Vector2(-326, -79)
+
+[node name="Block6" parent="." unique_id=280104133 instance=ExtResource("1_glv2v")]
+position = Vector2(2412, -683)
+
+[node name="Block5" parent="." unique_id=7781386 instance=ExtResource("1_glv2v")]
+position = Vector2(3344, -445)
+
+[node name="Block4" parent="." unique_id=325686278 instance=ExtResource("1_glv2v")]
+position = Vector2(2913, -208)
+
+[node name="Block3" parent="." unique_id=1184422666 instance=ExtResource("1_glv2v")]
+position = Vector2(1648, 4)
 
 [node name="Block" parent="." unique_id=1755264499 instance=ExtResource("1_glv2v")]
 position = Vector2(342, 4)
 
+[node name="Block2" parent="." unique_id=1519981141 instance=ExtResource("1_glv2v")]
+position = Vector2(995, 4)
+
+[node name="Enemy1" parent="." unique_id=313768211 groups=["enemy"] instance=ExtResource("3_r0du0")]
+position = Vector2(322, -165)
+script = ExtResource("4_cm0pq")
+patrol_texture = ExtResource("5_3dxm6")
+chase_texture = ExtResource("6_lgr22")
+dead_texture = ExtResource("6_trn2v")
+
+[node name="Area2D" type="Area2D" parent="Enemy1" unique_id=756821923]
+position = Vector2(-322, 165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1/Area2D" unique_id=1156830684]
+position = Vector2(315, -254.5)
+shape = SubResource("RectangleShape2D_lgr22")
+
+[node name="Block8" parent="." unique_id=171269680 instance=ExtResource("1_glv2v")]
+position = Vector2(2301, 4)
+
+[node name="Block9" parent="." unique_id=1840428636 instance=ExtResource("1_glv2v")]
+position = Vector2(-309, 4)
+
 [node name="Player" parent="." unique_id=204398602 instance=ExtResource("2_uu6xs")]
-position = Vector2(208, -214)
+position = Vector2(2127, -188)
+dead_texture = ExtResource("7_lgr22")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=908494906]
 zoom = Vector2(0.5, 0.5)
-
-[node name="Block2" parent="." unique_id=1519981141 instance=ExtResource("1_glv2v")]
-position = Vector2(1023, -217)
